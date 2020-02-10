@@ -8,10 +8,10 @@ from MatrixUtils import genMatrix, genMatrix2, printSubarray
 def multiply_matrices(arr):
     final_arr = [[0 for i in range(len(arr))] for i in range(len(arr))]
     with pymp.Parallel(6) as p:
-        for i in range(len(arr)):
+        for i in p.range(len(arr)):
             for j in range(len(arr)):
                 x = 0
-                for k in p.range(len(arr)):
+                for k in range(len(arr)):
                     x += (arr[i][k]*arr[k][j])
                 final_arr[i][j] = x
     return final_arr
