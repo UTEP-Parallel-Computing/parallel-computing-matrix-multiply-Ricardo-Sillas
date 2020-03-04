@@ -2,7 +2,7 @@
 # Ricardo Sillas
 import pymp
 import time
-from MatrixUtils import genMatrix, genMatrix2, printSubarray
+from matrixUtils import genMatrix, genMatrix2, printSubarray
 
 # This is where it multiplies two square matrices where they are of equal size.
 def multiply_matrices(arr):
